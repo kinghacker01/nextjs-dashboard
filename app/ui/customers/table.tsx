@@ -11,7 +11,7 @@ export default async function CustomersTable({
 }: {
   query: string;
 }) {
-  const customers = await fetchFilteredCustomers(query);
+  const customers: FormattedCustomersTable[] = await fetchFilteredCustomers(query);
 
   return (
     <div className="w-full">
